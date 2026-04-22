@@ -90,61 +90,56 @@ button:hover {
     <p>CURRENCY EXCHANGE PLATFORM</p>
 </div>
 
-<div class="container">
 
-    <div class="row">
-        <div class="box">
-            <label>Amount</label>
-            <input type="number" id="amount" value="100">
-        </div>
+<div class="card">
 
-        <div class="box">
-            <label>From</label>
-            <select id="from">
-                <option value="USD">USD - $</option>
-                <option value="RWF">Rwanda - RWF</option>
-            </select>
-        </div>
+  <div class="left">
+    <label>Amount</label>
+    <input type="number" id="amount" placeholder="100">
 
-        <div class="box">
-            <label>To</label>
-            <select id="to">
-                <option value="RWF">Rwanda - RWF</option>
-                <option value="USD">USD - $</option>
-            </select>
-        </div>
-    </div>
+    <label>From</label>
+    <select id="from">
+      <option value="USD">USD - $</option>
+      <option value="EUR">EUR - €</option>
+      <option value="RWF">Rwanda - RWF</option>
+    </select>
+
+    <label>To</label>
+    <select id="to">
+      <option value="RWF">Rwanda - RWF</option>
+      <option value="USD">USD - $</option>
+      <option value="EUR">EUR - €</option>
+    </select>
 
     <button onclick="convert()">Convert</button>
+  </div>
 
-    <div class="result" id="result">Result: 0</div>
+  <div class="right">
+    <h3>Result</h3>
+    <div id="result">0</div>
+  </div>
 
 </div>
 
 <script>
-
 const rates = {
-    USD: 1,
-    RWF: 1300
+  USD: 1,
+  EUR: 0.92,
+  RWF: 1300
 };
 
 function convert() {
-    let amount = document.getElementById("amount").value;
-    let from = document.getElementById("from").value;
-    let to = document.getElementById("to").value;
+  let amount = document.getElementById("amount").value;
+  let from = document.getElementById("from").value;
+  let to = document.getElementById("to").value;
 
-    
-}
-     let base = amount / rates[from];
+  let inUSD = amount / rates[from];
+  let result = inUSD * rates[to];
 
-    
-    let result = base * rates[to];
-
-    
-    document.getElementById("result").innerText =
-        "Result: " + result.toFixed(0);
+  document.getElementById("result").innerText = result.toFixed(2);
 }
 </script>
 
-</body> 
+</body>
+</html>
 </html>
