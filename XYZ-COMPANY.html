@@ -135,6 +135,15 @@ function convert() {
 
     
 }
+     let base = amount / rates[from];
+
+    
+    let result = base * rates[to];
+
+    
+    document.getElementById("result").innerText =
+        "Result: " + result.toFixed(0);
+}
 </script>
 
 </body> 
