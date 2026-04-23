@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f2f2f2;
+}
+
+/* 🔵 Header */
+.header {
+  background: #0b0b4f;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.header p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* 🤍 Card */
+.card {
+  background: white;
+  width: 60%;
+  margin: 40px auto;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+/* Left side */
+.left {
+  width: 60%;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Button */
+button {
+  margin-top: 15px;
+  background: #0b0b4f;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 120px;
+  cursor: pointer;
+}
+
+/* Right side */
+.right {
+  width: 35%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#result {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+}
